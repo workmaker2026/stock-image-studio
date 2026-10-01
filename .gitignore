@@ -1,0 +1,6 @@
+.env
+runtime/
+storage/images/*
+!storage/images/.gitkeep
+studio.db
+__pycache__/

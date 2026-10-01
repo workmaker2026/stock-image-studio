@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stock Image Studio</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span>Stock Image Studio</span>
+      </div>
+
+      <nav>
+        <div class="nav-group">
+          <div class="nav-title">개요</div>
+          <a href="#top" class="nav-link">시작하기</a>
+          <a href="#suggestions-section" class="nav-link">아이디어 추천</a>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-title">이미지 생성</div>
+          <a href="#top" class="nav-link" data-preset="photo">사진 이미지 만들기</a>
+          <a href="#top" class="nav-link" data-preset="background">배경 이미지 만들기</a>
+          <a href="#top" class="nav-link" data-preset="illustration">일러스트 만들기</a>
+          <a href="#top" class="nav-link" data-preset="icon">아이콘 만들기</a>
+          <a href="#top" class="nav-link" data-preset="3d">3D 오브젝트 만들기</a>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-title">이미지 편집</div>
+          <a href="#gallery" class="nav-link">배경 제거</a>
+          <a href="#gallery" class="nav-link">업스케일링</a>
+          <a href="#gallery" class="nav-link">SVG 벡터 변환</a>
+          <a href="#gallery" class="nav-link">이미지 크기 조절</a>
+          <a href="#gallery" class="nav-link">파일 크기 최적화</a>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-title">정리</div>
+          <a href="#gallery" class="nav-link">제목·키워드 자동생성</a>
+          <a href="#toolbar" class="nav-link">CSV 내보내기</a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section id="top" class="hero">
+        <h1>사진부터 배경, 요소까지</h1>
+        <p class="sub">생성 → 배경제거·업스케일·벡터화·리사이즈 → 제목·키워드 → CSV 내보내기까지 한곳에서.</p>
+      </section>
+
+      <section class="generate-bar">
+        <textarea id="prompt" placeholder="예: 시트러스 향수병, 스파클 이펙트, 스튜디오 조명" rows="2"></textarea>
+        <div class="row">
+          <select id="preset"></select>
+          <select id="count">
+            <option value="1">1장</option>
+            <option value="2">2장</option>
+            <option value="4">4장</option>
+          </select>
+          <button id="generateBtn">생성</button>
+          <button id="suggestBtn" class="secondary">지금 잘 팔리는 주제 추천</button>
+        </div>
+        <div id="suggestions-section">
+          <div id="suggestions" class="suggestions"></div>
+        </div>
+      </section>
+
+      <section id="toolbar" class="toolbar">
+        <span id="selectedCount">0개 선택됨</span>
+        <div class="toolbar-actions">
+          <button id="exportBtn" class="secondary">CSV만 내보내기</button>
+          <button id="exportZipBtn">이미지+CSV 다운로드 (zip)</button>
+        </div>
+      </section>
+
+      <main id="gallery"></main>
+    </main>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

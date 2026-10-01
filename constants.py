@@ -1,0 +1,31 @@
+STOCK_CATEGORIES = {
+    1: "Animals",
+    2: "Buildings and Architecture",
+    3: "Business",
+    4: "Drinks",
+    5: "The Environment",
+    6: "States of Mind",
+    7: "Food",
+    8: "Graphic Resources",
+    9: "Hobbies and Leisure",
+    10: "Industry",
+    11: "Landscapes",
+    12: "Lifestyle",
+    13: "People",
+    14: "Plants and Flowers",
+    15: "Culture and Religion",
+    16: "Science",
+    17: "Social Issues",
+    18: "Sports",
+    19: "Technology",
+    20: "Transport",
+    21: "Travel",
+}
+
+STYLE_PRESETS = {
+    "photo": {"model": "recraftv4_1", "style": None, "label": "사진"},
+    "illustration": {"model": "recraftv4_1_vector", "style": "vector_illustration", "label": "일러스트"},
+    "icon": {"model": "recraftv4_1_vector", "style": "vector_illustration", "label": "아이콘"},
+    "3d": {"model": "recraftv4_1", "style": None, "label": "3D 오브젝트"},
+    "background": {"model": "recraftv4_1", "style": None, "label": "브랜드 배경"},
+}
